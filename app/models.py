@@ -42,7 +42,7 @@ class Holding(Base):
     filing_id = Column(Integer, ForeignKey("filings.id"), nullable=False)
 
     name = Column(String, nullable=False)           #종목명
-    ticker = Column(String, nullable=False)         #종목 티커
+    ticker = Column(String, nullable=True)         #종목 티커
     cusip = Column(String, index=True, nullable=False)   #CUSIP 식별자
 
     shares = Column(Float, nullable=False)        #보유 주식 수 소수점 일수도 있어서 Float
